@@ -1,0 +1,301 @@
+body,
+html {
+  font-size: 62.5%;
+  font-family: "Times New Roman", Times, serif;
+  margin: 0;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #000;
+  opacity: 0.7;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  z-index: 20;
+  display: none;
+}
+#overlay.active {
+  display: block;
+}
+
+#overlay_inner {
+  position: relative;
+  height: 100%;
+}
+
+#menu {
+  background: #000;
+  padding: 60px 25px;
+  position: fixed;
+  left: -350px;
+  top: 0;
+  z-index: 30;
+  width: 300px;
+  height: 100vh;
+  font-size: 1.6rem;
+}
+@media screen and (max-width: 1024px) {
+  #menu {
+    width: 50%;
+    max-width: 300px;
+  }
+}
+
+#open_menu_button {
+  cursor: pointer;
+}
+#open_menu_button.inactive {
+  display: none;
+}
+
+#close_menu_button {
+  color: #fff;
+  cursor: pointer;
+  float: right;
+  z-index: 9999;
+  position: absolute;
+  right: 65px;
+  top: 20px;
+  font-size: 50px;
+  line-height: 50px;
+  display: none;
+}
+#close_menu_button.active {
+  display: block;
+}
+
+#menu_upper {
+  list-style: none;
+  color: #fff;
+  padding-left: 0;
+}
+#menu_upper li {
+  border-top: 1px solid #fff;
+  padding: 20px 0;
+}
+#menu_upper li a {
+  color: #fff;
+  text-decoration: none;
+}
+#menu_upper li:last-child {
+  border-bottom: 1px solid #fff;
+}
+
+#menu_bottom {
+  margin-top: 60px;
+  list-style: none;
+  padding-left: 0;
+}
+#menu_bottom li {
+  padding: 20px 0;
+}
+#menu_bottom li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#header_wrapper {
+  width: 100%;
+  background-color: #fff;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+#header_wrapper #header_inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 20px 0;
+}
+#header_wrapper #header_inner h1 {
+  margin: 0;
+  line-height: 1px;
+}
+
+#video_wrapper {
+  width: 100%;
+  margin-top: 80px;
+}
+
+#pickup {
+  margin-top: 30px;
+  padding-top: 40px;
+}
+
+/* feature */
+#feature {
+  margin-top: 30px;
+  padding-top: 40px;
+}
+
+#feature_wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 415px);
+  gap: 26px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1024px) {
+  #feature_wrapper {
+    display: block;
+  }
+}
+
+.feature_card {
+  box-shadow: 0 0 8px 4px #ccc;
+}
+@media screen and (max-width: 1024px) {
+  .feature_card {
+    margin-bottom: 20px;
+  }
+}
+
+.feature_content {
+  padding: 0 10px;
+}
+@media screen and (max-width: 1024px) {
+  .feature_content {
+    padding: 10px;
+  }
+}
+
+.feature_image {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+.feature_category {
+  margin: 10px 0;
+  font-size: 1.4rem;
+}
+
+.feature_text {
+  margin: 10px 0;
+  font-size: 1.6rem;
+  line-height: 1.5em;
+}
+
+.feature_date {
+  margin: 10px 0;
+  font-size: 1.4rem;
+  text-align: right;
+}
+
+/* contact */
+#contact {
+  margin-top: 70px;
+  background-color: #121212;
+  color: #fff;
+}
+
+#contact_wrapper {
+  background-color: #121212;
+  padding: 50px 0;
+}
+
+#contact_wrapper_left,
+#contact_wrapper_right {
+  width: 50%;
+  padding: 0 20px;
+}
+@media screen and (max-width: 1024px) {
+  #contact_wrapper_left,
+  #contact_wrapper_right {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+#contact_flex_wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1024px) {
+  #contact_flex_wrapper {
+    display: block;
+  }
+}
+
+#contact_form {
+  margin-top: 16px;
+  font-size: 1.6rem;
+}
+
+.form_item {
+  margin-bottom: 20px;
+}
+.form_item label {
+  display: inline-block;
+  padding-bottom: 5px;
+}
+.form_item input,
+.form_item textarea {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.form_item textarea {
+  resize: none;
+}
+
+#submit_button {
+  background-color: #121212;
+  color: #fff;
+  border: 1px solid #fff;
+  width: 200px;
+  padding: 10px;
+  cursor: pointer;
+}
+#submit_button:hover {
+  background-color: #fff;
+  color: #121212;
+}
+@media screen and (max-width: 1024px) {
+  #submit_button {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+.contact_text {
+  font-size: 1.6rem;
+  line-height: 1.5em;
+  margin-bottom: 30px;
+}
+
+#copyrights {
+  display: block;
+  text-align: center;
+  font-size: 1.4rem;
+  padding-bottom: 10px;
+}
+
+.section_heading {
+  font-size: 2.8rem;
+  font-weight: bold;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.scroll_fade {
+  opacity: 0;
+  transition: all 2s;
+}
+.scroll_fade.done {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/*# sourceMappingURL=style.css.map */
